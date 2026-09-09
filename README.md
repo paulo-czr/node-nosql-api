@@ -79,4 +79,4 @@ node-nosql/
 ## 🎓 Certificação & Créditos
 
 Projeto elaborado durante a formação em **Node.js**.  
-*Conecte-se comigo no [LinkedIn](https://www.linkedin.com/paulo-czr)!*
+*Conecte-se comigo no [LinkedIn](https://www.linkedin.com/in/paulo-czr)!*
