@@ -41,15 +41,15 @@ exports.obterUsuarioPorId = async (req, res) => {
 exports.atualizarUsuario = async (req, res) => {
     try {
         const { id } = req.params;
-        const usuarioAtualizado = await usuarioModel.findByIdAndUpdate(
-            id, 
-            req.body, 
-            { new: true, runValidators: true }
-        );
+        const usuario = await usuarioModel.findById(id);
 
-        if (!usuarioAtualizado) {
+        if (!usuario) {
             return res.status(404).json({ message: `ID ${id} não encontrado para atualização de usuário.` });
         }
+
+        Object.assign(usuario, req.body);
+
+        const usuarioAtualizado = await usuario.save();
 
         return res.status(200).json(usuarioAtualizado);
 
