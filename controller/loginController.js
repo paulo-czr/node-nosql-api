@@ -3,46 +3,6 @@ const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
 require("dotenv").config()
 
-/**
- * Valida se os campos obrigatórios da requisição foram preenchidos.
- */
-const validarCredenciaisEntrada = (usuario, senha) => {
-    if (!usuario || !senha) {
-        return {
-            valido: false,
-            mensagem: "Nome de usuário e senha são obrigatórios."
-        };
-    }
-    return { valido: true };
-};
-
-/**
- * Busca o usuário no banco pelo nome de usuário.
- */
-const buscarUsuarioPorUsername = async (nomeUsuario) => {
-    return await Usuario.findOne({ usuario: nomeUsuario });
-};
-
-/**
- * Compara a senha informada com o hash salvo no banco.
- */
-const verificarSenha = async (senhaTextoPuro, senhaHash) => {
-    return await bcrypt.compare(senhaTextoPuro, senhaHash);
-};
-
-/**
- * Formata os dados do usuário para o retorno da API (evita expor dados sensíveis).
- */
-const formatarRespostaUsuario = (usuario) => {
-    return {
-        id: usuario._id,
-        nome: usuario.nome,
-        usuario: usuario.usuario,
-        email: usuario.email,
-        idade: usuario.idade,
-        regra: usuario.regra
-    };
-};
 
 // Login
 const login = async (req, res) => {
@@ -87,6 +47,48 @@ const login = async (req, res) => {
         return res.status(500).json({ mensagem: "Erro interno no servidor." });
     }
 };
+
+/**
+ * Valida se os campos obrigatórios da requisição foram preenchidos.
+ */
+const validarCredenciaisEntrada = (usuario, senha) => {
+    if (!usuario || !senha) {
+        return {
+            valido: false,
+            mensagem: "Nome de usuário e senha são obrigatórios."
+        };
+    }
+    return { valido: true };
+};
+
+/**
+ * Busca o usuário no banco pelo nome de usuário.
+ */
+const buscarUsuarioPorUsername = async (nomeUsuario) => {
+    return await Usuario.findOne({ usuario: nomeUsuario });
+};
+
+/**
+ * Compara a senha informada com o hash salvo no banco.
+ */
+const verificarSenha = async (senhaTextoPuro, senhaHash) => {
+    return await bcrypt.compare(senhaTextoPuro, senhaHash);
+};
+
+/**
+ * Formata os dados do usuário para o retorno da API (evita expor dados sensíveis).
+ */
+const formatarRespostaUsuario = (usuario) => {
+    return {
+        id: usuario._id,
+        nome: usuario.nome,
+        usuario: usuario.usuario,
+        email: usuario.email,
+        idade: usuario.idade,
+        regra: usuario.regra
+    };
+};
+
 
 module.exports = {
     login,
