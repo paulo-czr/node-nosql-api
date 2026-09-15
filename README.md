@@ -10,7 +10,7 @@ O **Node.js NoSQL API** é uma aplicação Back-End desenvolvida durante a forma
 
 <p align="center">
   <a href="https://skillicons.dev">
-    <img src="https://skillicons.dev/icons?i=js,nodejs,mongodb,jest,,postman,git&theme=dark" />
+    <img src="https://skillicons.dev/icons?i=js,nodejs,mongodb,jest,postman,git&theme=dark" />
   </a>
 </p>
 
@@ -18,14 +18,16 @@ O **Node.js NoSQL API** é uma aplicação Back-End desenvolvida durante a forma
 
 ## Sumário
 
-- [Tecnologias Utilizadas](#tecnologias-utilizadas)
+- [Principais Funcionalidades](#principais-funcionalidades)
+- [Tecnologias Utilizadas](#tecnologias)
 - [Arquitetura](#arquitetura)
-- [Funcionalidades Principais](#funcionalidades-principais)
-- [Telas do Sistema](#telas-do-sistema)
+- [Autenticação e Autorização](#autenticação-e-autorização)
+- [Fluxo de Login](#fluxo-de-login)
 - [Endpoints da API](#endpoints-da-api)
-- [Como Executar o Projeto](#como-executar-o-projeto)
-- [Estrutura do Projeto](#estrutura-do-projeto)
-- [Autores](#autores)
+- [Configuração do Ambiente](#configuração-do-ambiente)
+- [Boas Práticas de Segurança](#boas-práticas-de-segurança)
+- [Próximos Passos](#próximos-passos)
+- [Autor](#autor)
 
 ---
 
@@ -515,5 +517,9 @@ Este projeto foi desenvolvido como parte da formação em **Node.js**, com o obj
 **Paulo Cesar**
 
 Projeto desenvolvido para fins de estudo e evolução prática em desenvolvimento Back-End com Node.js.
+
+[PauloCesarCoder@gmail.com](mailto:PauloCesarCoder@gmail.com)
+[GitHub](https://github.com/paulo-czr)
+[LinkedIn](https://www.linkedin.com/in/paulo-czr)
 
 ---
